@@ -1,0 +1,24 @@
+User :
+	- Id
+	- Name
+	- Password
+
+Helm :
+	- Name
+	- 
+
+Etc.. :
+	- Name
+
+Commander :
+	- Name
+	- 
+
+March :
+	- Id_user
+	- Id_commander_1
+	- Id_commander_2
+	- Helm
+	- Iconic_Helm (bool)
+	- Crit_Helm (bool)
+	- etc..
