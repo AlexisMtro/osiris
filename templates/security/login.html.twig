@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<!--<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}-->
+
+    <!--{% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}-->
+
+<!--<div class="container">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputId_user">Game ID</label>
+    <input type="text" value="{{ last_username }}" name="id_user" id="inputId_user" class="form-control" autocomplete="username" required autofocus>
+    <label for="inputPassword">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+    <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+</div>-->
+
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="../assets/images/tr.png"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 login">
+        <form method="post">
+          <div class="flex-row align-items-center justify-content-center justify-content-lg-start">
+
+          <h4 class="login_title">Welcome to your new Therapy</h4>
+          
+          <div class="form-outline mb-4 login_gameId">
+            <label for="inputId_user">Game ID</label>
+            <input type="text" value="{{ last_username }}" name="id_user" id="inputId_user" class="form-control form-control-lg" autocomplete="username" required autofocus>
+          </div>
+
+          <div class="form-outline mb-3">
+            <label for="inputPassword">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control form-control-lg" autocomplete="current-password" required>
+          </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+          <div>
+            <span>You don't have an account ? <a href="{{path('app_register')}}"> Register here </a></span>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2 login_button">
+            <button class="btn btn-lg btn-danger" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<!--</form>-->
+{% endblock %}

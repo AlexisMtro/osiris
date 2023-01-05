@@ -1,0 +1,65 @@
+body {
+    background-color: #DCDCDC;
+}
+
+.registration_bloc {
+    vertical-align:middle; 
+    display:inline-block; 
+}
+
+#registration_form_validator {
+    margin-left: 5px !important;
+    margin-top: 5px !important;
+}
+
+.login, .registration {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+
+.login_title, .login_gameId, .registration_title, .registration_field {
+    margin-top: 15px;
+}
+
+.login_button, .registration_button {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.profil_title, .listPlayers_title, .newMarch_title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profil_link, .march_link, .newMarch_link, .editMarch_link, .newMarch_back {
+    text-decoration: none;
+    color: white;
+}
+
+.profil_link:hover, .march_link:hover, .newMarch_link:hover, .editMarch_link:hover, .newMarch_back:hover {
+    color: white;
+}
+
+.newMarch_button, .march_button {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.newMarch_save {
+    float: right;
+    margin-top: 15px;
+}
+
+.newMarch_field, .newMarch_back_button {
+    margin-top: 15px;
+}
+
+.add_march {
+    float: right !important;
+}
+
+.players, .marches {
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

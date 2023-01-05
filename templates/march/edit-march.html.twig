@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MarchController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1 class="newMarch_title">Edit your march</h1>
+    <button class="btn btn-lg btn-danger newMarch_back_button"><a class="newMarch_back" href="{{path('profile')}}">Back</a></button>  
+
+    <div class="container">
+    {{form_start(editMarchForm)}}
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.id_commander_1)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.id_commander_2)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.helm)}} 
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_helm)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_helm)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.chest)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_chest)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_chest)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.weapon)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_weapon)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_weapon)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.glove)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_glove)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_glove)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.leg)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_leg)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_leg)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.boot)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_boot)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_boot)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.accessory_1)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_accessory_1)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_accessory_1)}}
+            </div>
+        </div>
+
+        <div class="row align-items-center custom-line">
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.accessory_2)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.crit_accessory_2)}}
+            </div>
+            <div class="col-lg newMarch_field">
+                {{form_row(editMarchForm.iconic_accessory_2)}}
+            </div>
+        </div>
+    <button class="btn btn-lg btn-danger newMarch_save" type="submit">Save</button>
+    {{form_end(editMarchForm)}}
+</div>
+{% endblock %}

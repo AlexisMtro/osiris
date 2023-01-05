@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1 class="profil_title">Your Profile</h1>
+    <button class="btn btn-lg btn-danger"><a class="march_link" href="{{path('main')}}">Back</a></button> 
+
+    {% for march in marches %}
+        <div>
+            <table class="table marches">
+                <thead>
+                    <tr>
+                        <th class="table-light"></th>
+                        <th class="table-light col-md-7">{{march.id_commander_1}} / {{march.id_commander_2}}</th>
+                        <th class="table-light col-md-2">Crit</th>
+                        <th class="table-light col-md-1">Iconic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="table-light" scope="row">Helm</th>
+                        <td class="table-light">{{march.helm}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Chest</th>
+                        <td class="table-light">{{march.chest}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Weapon</th>
+                        <td class="table-light">{{march.weapon}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Glove</th>
+                        <td class="table-light">{{march.glove}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Leg</th>
+                        <td class="table-light">{{march.leg}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Boot</th>
+                        <td class="table-light">{{march.boot}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Accessory</th>
+                        <td class="table-light">{{march.accessory_1}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-light" scope="row">Accessory</th>
+                        <td class="table-light">{{march.accessory_2}}</td>
+                        <td class="table-light">{{ march.crit_helm ? 'Yes' : 'No' }}</td>
+                        <td class="table-light">{{ march.iconic_helm ? 'Yes' : 'No' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+    {% endfor %}
+</div>
+{% endblock %}
