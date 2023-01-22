@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StatistiqueController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+<h1 class="profil_title">Statistiques</h1>
+    <button class="btn btn-lg btn-danger"><a class="march_link" href="{{path('main')}}">Back</a></button>  
+    <table class="table commanders">
+        <thead>
+                <tr>
+                    <th class="table-light col-md-2">Primary Commander</th>
+                    <th class="table-light col-md-1">Number</th>
+                </tr>
+            <tbody>
+            {% for commander in commanders1 %}
+                <tr>
+                    <th class="table-light" scope="row">{{commander[0].id_commander_1}}</th>
+                    <td class="table-light">{{commander[1]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+
+    <table class="table commanders">
+        <thead>
+                <tr>
+                    <th class="table-light col-md-2">Secondary Commander</th>
+                    <th class="table-light col-md-1">Number</th>
+                </tr>
+            <tbody>
+            {% for commander in commanders2 %}
+                <tr>
+                    <th class="table-light" scope="row">{{commander[0].id_commander_2}}</th>
+                    <td class="table-light">{{commander[1]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+</div>
+{% endblock %}

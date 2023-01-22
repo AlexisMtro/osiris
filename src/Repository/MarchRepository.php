@@ -59,6 +59,24 @@ class MarchRepository extends ServiceEntityRepository
             ->getSingleScalarResult();
     }
 
+    public function countCommanders1(): array
+    {
+        return $this->createQueryBuilder('c')
+            ->select('count(c.id_commander_1), c')
+            ->groupBy('c.id_commander_1')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function countCommanders2(): array
+    {
+        return $this->createQueryBuilder('c')
+            ->select('count(c.id_commander_2), c')
+            ->groupBy('c.id_commander_2')
+            ->getQuery()
+            ->getResult();
+    }
+
 //    /**
 //     * @return March[] Returns an array of March objects
 //     */

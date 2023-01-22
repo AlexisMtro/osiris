@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}Welcome to your therapy!{% endblock %}
 
 {% block body %}
 <style>
@@ -10,7 +10,7 @@
 
 <div class="example-wrapper">
     <h1 class="listPlayers_title">List of players</h1>
-       
+    <button class="btn btn-lg btn-danger"><a class="march_link" href="{{path('main')}}">Back</a></button>  
        <button class="btn btn-lg btn-danger profil_button"><a class="profil_link" href="{{path('profile')}}">Your Profile</a></button>
 <div class="players">
     <table class="table">

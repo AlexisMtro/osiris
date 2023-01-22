@@ -96,6 +96,9 @@ class March
     #[ORM\Column]
     private ?bool $crit_accessory_2 = null;
 
+    #[ORM\Column]
+    private ?\DateTime $updated_at = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -521,6 +524,23 @@ class March
     public function setCritAccessory2(bool $crit_accessory_2): self
     {
         $this->crit_accessory_2 = $crit_accessory_2;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTime
+    {
+        return $this->updated_at;
+    }
+
+    public function updated_at(): ?\DateTime
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTime $updated_at): self
+    {
+        $this->updated_at = $updated_at;
 
         return $this;
     }

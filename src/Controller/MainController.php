@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\March;
 use App\Entity\User;
-use App\Form\MarchFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,7 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/players', name: 'main')]
+    #[Route('/home', name: 'main')]
+    public function home(ManagerRegistry $doctrine): Response
+    {
+        return $this->render('main/home.html.twig');
+    }
+
+    #[Route('/players', name: 'players')]
     public function index(ManagerRegistry $doctrine): Response
     {
         $players = $doctrine->getRepository(User::class)->findAll();

@@ -21,6 +21,8 @@ class MarchController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $dt = new \DateTime();
+            $march->setUpdatedAt($dt);
             $entityManager->persist($march);
             $entityManager->flush();
             return $this->redirectToRoute('profile');
@@ -41,6 +43,9 @@ class MarchController extends AbstractController
 
             /** @var March $march */
             $march = $form->getData();
+
+            $dt = new \DateTime();
+            $march->setUpdatedAt($dt);
 
             $entityManager->persist($march);
             $entityManager->flush();
