@@ -1,0 +1,6 @@
+parameters:
+    database_host: osirisxosiris.mysql.db
+    database_port: null
+    database_name: osirisxosiris
+    database_user: osirisxosiris
+    database_password: Caroline49848
